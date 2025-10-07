@@ -68,8 +68,8 @@ Parameters of main_transformation_spatial_join:
 
 # Cite
 ```
-Dimitrios Tsitsigkos, Panagiotis Bouros, Konstantinos Lampropoulos, Nikos Mamoulis and Manolis Terrovitis, "**Two-layer Space-oriented Partitioning for Non-point Data**", IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), Vol 36, No 3, March 2024.
-Dimitrios Tsitsigkos, Konstantinos Lampropoulos, Panagiotis Bouros, Nikos Mamoulis and Manolis Terrovitis, "**A Two-layer Partitioning for Non-point Spatial Data**", Proceedings of the 37th IEEE International Conference on Data Engineering (IEEE ICDE'21), Chania, Greece, April 19-22, 2021.
+Dimitrios Tsitsigkos, Panagiotis Bouros, Konstantinos Lampropoulos, Nikos Mamoulis and Manolis Terrovitis, "Two-layer Space-oriented Partitioning for Non-point Data", IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), Vol 36, No 3, March 2024.
+Dimitrios Tsitsigkos, Konstantinos Lampropoulos, Panagiotis Bouros, Nikos Mamoulis and Manolis Terrovitis, "A Two-layer Partitioning for Non-point Spatial Data", Proceedings of the 37th IEEE International Conference on Data Engineering (IEEE ICDE'21), Chania, Greece, April 19-22, 2021.
 ```
 
 # Acknowledgments
