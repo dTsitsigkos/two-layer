@@ -11,10 +11,12 @@ Our implementation uses two types of datasets, depending on the query.
     - For range and disk queries, we use one input dataset file to build the 2-layer index and a query file.
     - For spatial joins, we use two input dataset files.
 Both types use MBRs, and the file format is:
+
      ```
     x1Start y1Start, x1End y1End
     x2Start y2Start, x2End y2End
     ```
+    
 For disk queries, we calculate the center of each MBR to use as the query point.
 
 ### Compile
