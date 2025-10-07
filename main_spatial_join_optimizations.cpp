@@ -31,9 +31,9 @@ void usage()
     cerr << "              display this help message and exit" << endl << endl;
     cerr << "EXAMPLES" << endl;
     cerr << "       Spatial join query using the 2-layer algorithm with mini joins baseline optimization with 2000 partitions per dimension." << endl;
-    cerr << "              /sj_opt -p 2000 -b dataset_file1.csv dataset_file2.csv" << endl;
+    cerr << "              ./sj_opt -p 2000 -b dataset_file1.csv dataset_file2.csv" << endl;
     cerr << "       Spatial join query using the 2-layer algorithm with mini joins and redundant comparisons with 2000 partitions per dimension." << endl;
-    cerr << "              /sj_opt -p 2000 -r dataset_file1.csv dataset_file2.csv" << endl;
+    cerr << "              ./sj_opt -p 2000 -r dataset_file1.csv dataset_file2.csv" << endl;
     cerr << "\n" << endl;
     exit(1);
 }

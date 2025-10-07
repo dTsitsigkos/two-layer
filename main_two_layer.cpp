@@ -28,10 +28,12 @@ void usage()
     cerr << "       -h" << endl;
     cerr << "              display this help message and exit" << endl << endl;
     cerr << "EXAMPLES" << endl;
-    cerr << "       Window range query using the 2-level algorithm with 3000 partitions per dimension." << endl;
-    cerr << "              ./twoLayer -p 3000 -w dataset_file.csv query_file.csv" << endl;
-    cerr << "       Disk range query using the 2-level algorithm with 3000 partitions and a radius of 0.1" << endl;
-    cerr << "              ./twoLayer -p 3000 -d -e 0.1 dataset_file.csv query_file.csv" << endl;
+    cerr << "       Window range query using the 2-layer algorithm with 3000 partitions per dimension." << endl;
+    cerr << "              ./two_layer -p 3000 -w dataset_file.csv query_file.csv" << endl;
+    cerr << "       Disk range query using the 2-layer algorithm with 3000 partitions and a radius of 0.1" << endl;
+    cerr << "              ./two_layer -p 3000 -d -e 0.1 dataset_file.csv query_file.csv" << endl;
+    cerr << "       Spatial join using the 2-layer algorithm with 3000 partitions per dimension." << endl;
+    cerr << "              ./two_layer -p 3000 -s dataset_file.csv dataset_file2.csv" << endl;
     cerr << "\n" << endl;
     exit(1);
 }

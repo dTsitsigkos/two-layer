@@ -51,20 +51,79 @@ Parameters of main_transformation_spatial_join:
 
 ### Files
 - #####  utils.h
+    
+    Contains key functions for the grid, distance calculations for disk queries, and sorting for all queries. 
 
 - #####  partition.h
+    
+    Contains all the necessary partitioning methods for the different queries.  
 
 - #####  two_layer.h
+    
+    Contains all querying methods for two-layer, including range queries, disk queries, and spatial joins.  
 
 - #####  two_layer_plus.h
+    
+    Contains range query methods for two-layer-plus.
 
 - #####  main_two_layer.cpp
 
+    Contains the 2-layer code, which supports window queries, disk queries, and spatial joins.
+
+    ##### Example 
+    - ###### window Query
+    
+        ```sh
+        $ ./two_layer -p 3000 -w dataset_file.csv query_file.csv
+        ```
+    - ###### disk Query
+    
+        ```sh
+        $ ./two_layer -p 3000 -d -e 0.1 dataset_file.csv query_file.csv
+        ```
+
+     - ###### Spatial join
+
+     ```sh
+        $ ./two_layer -p 3000 -s dataset_file.csv dataset_file2.csv
+        ```
+
 - #####  main_two_layer_plus.cpp
 
+    Contains the 2-layer-plus code, which supports window queries.
+
+    - ###### window Query
+    
+        ```sh
+        $ ./two_layer_plus -p 3000 -w dataset_file.csv query_file.csv
+        ```
+
 - #####  main_spatial_join_optimizations.cpp
+    
+    Contains the 2-layer code for spatial join optimizations when no partitions exist for the two datasets.
+
+    - ###### Spatial join query mini joins baseline optimization
+
+    ```sh
+    $ ./sj_opt -p 2000 -b dataset_file1.csv dataset_file2.csv
+    ```
+
 
 - #####  main_transformation_spatial_join.cpp
+
+    Contains the 2-layer code for spatial joins when the two datasets already have partitions with different powers of 2 (transformation grid: materialized and non-materialized).
+
+    - ###### Spatial join query materialized
+    
+        ```sh
+        $ ./sj_transf -p 2048 -s 256 -m dataset_file1.csv dataset_file2.csv
+        ```
+
+     - ###### Spatial join query non-materialized
+    
+        ```sh
+        $ ./sj_transf -p 2048 -s 256 -n dataset_file1.csv dataset_file2.csv
+        ```
 
 # Cite
 ```

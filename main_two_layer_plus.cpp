@@ -26,8 +26,8 @@ void usage()
     cerr << "       -h" << endl;
     cerr << "              display this help message and exit" << endl << endl;
     cerr << "EXAMPLES" << endl;
-    cerr << "       Window range query using the 2-level algorithm with 3000 partitions per dimension." << endl;
-    cerr << "              ./two_layer_plus -p 3000 -w dataset.csv TIGER_c0.1%_n10000.qry" << endl;
+    cerr << "       Window range query using the 2-layer-plus algorithm with 3000 partitions per dimension." << endl;
+    cerr << "              ./two_layer_plus -p 3000 -w dataset_file.csv query_file.csv" << endl;
     cerr << "\n" << endl;
     exit(1);
 }
