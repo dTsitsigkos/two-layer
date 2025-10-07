@@ -7,7 +7,15 @@ Source code for the paper "**A Two-Layer Partitioning for Non-Point Spatial Data
 - OpenMP
 
 ### Datasets
-
+Our implementation uses two types of datasets, depending on the query.
+    - For range and disk queries, we use one input dataset file to build the 2-layer index and a query file.
+    - For spatial joins, we use two input dataset files.
+Both types use MBRs, and the file format is:
+     ```
+    x1Start y1Start, x1End y1End
+    x2Start y2Start, x2End y2End
+    ```
+For disk queries, we calculate the center of each MBR to use as the query point.
 
 ### Compile
 Compile using ```make all``` or ```make <option>``` where <option> can be one of the following:
@@ -25,7 +33,7 @@ Parameters of main_two_layer and main_two_layer_plus. **Keep in mind** that main
 | -d | Disk Query. **Keep in mind** that when using -d the use of -e is mandatory. (see examples) |
 | -e | Radius of the disk query |
 | -s | Spatial join |
-| -h | Print the manual|
+| -h | Print the manual |
 
 
 Parameters of main_spatial_join_optimizations:
@@ -37,7 +45,7 @@ Parameters of main_spatial_join_optimizations:
 | -r | Mini joins and redundant comparisons |
 | -c | Mini joins, unnecessary and redundant comparisons |
 | -a | Mini joins, unnecessary and redundant comparisons and storage optimizations |
-| -h | Print the manual|
+| -h | Print the manual |
 
 Parameters of main_transformation_spatial_join:
 | Parameters | README |
@@ -46,7 +54,7 @@ Parameters of main_transformation_spatial_join:
 | -s | The number of partions for the second dataset per dimension |
 | -m | Materialized spatial join algorithm |
 | -n | Non-materialized spatial join algorithm |
-| -h | Print the manual|
+| -h | Print the manual |
 
 
 ### Files
@@ -82,7 +90,7 @@ Parameters of main_transformation_spatial_join:
         $ ./two_layer -p 3000 -d -e 0.1 dataset_file.csv query_file.csv
         ```
 
-     - ###### Spatial join
+     - ###### spatial join
 
      ```sh
         $ ./two_layer -p 3000 -s dataset_file.csv dataset_file2.csv
