@@ -1,6 +1,17 @@
 # Two-layer Space-oriented Partitioning for Non-point Data
 
-Source code for the paper "**A Two-Layer Partitioning for Non-Point Spatial Data**" from the 37th International Conference on Data Engineering (ICDE) 2021, and the paper "**Two-Layer Space-Oriented Partitioning for Non-Point Data**" from IEEE Transactions on Knowledge and Data Engineering (TKDE) 2024.
+Non-point spatial objects (e.g., polygons, linestrings, etc.) are ubiquitous. We study the problem of indexing non-point
+objects in memory for range queries and spatial intersection joins. We propose a secondary partitioning technique for space-oriented
+partitioning indices (e.g., grids), which improves their performance significantly, by avoiding the generation and elimination of duplicate
+results. Our approach is easy to implement and can be used by any space-partitioning index to significantly reduce the cost of range
+queries and intersection joins. In addition, the secondary partitions can be processed independently, which makes our method
+appropriate for distributed and parallel indexing. Experiments on real datasets confirm the advantage of our approach against
+alternative duplicate elimination techniques and data-oriented state-of-the-art spatial indices. We also show that our partitioning
+technique, paired with optimized partition-to-partition join algorithms, typically reduces the cost of spatial joins by around 50%.
+
+Source code from the following publications:
+    -  <p align="justify"> Dimitrios Tsitsigkos, Panagiotis Bouros, Konstantinos Lampropoulos, Nikos Mamoulis and Manolis Terrovitis, <i>Two-layer Space-oriented Partitioning for Non-point Data</i>, https://doi.org/10.1109/TKDE.2023.3297975, IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), Vol 36, No 3, March 2024 </p>
+    -  <p align="justify"> Dimitrios Tsitsigkos, Konstantinos Lampropoulos, Panagiotis Bouros, Nikos Mamoulis and Manolis Terrovitis, <i>A Two-layer Partitioning for Non-point Spatial Data</i>, https://doi.org/10.1109/ICDE51399.2021.00157, Proceedings of the 37th IEEE International Conference on Data Engineering (IEEE ICDE'21), Chania, Greece, April 19-22, 2021</p>
 
 ### Dependencies
 - g++/gcc 
@@ -137,8 +148,37 @@ Parameters of main_transformation_spatial_join:
 
 # Cite
 ```
-Dimitrios Tsitsigkos, Panagiotis Bouros, Konstantinos Lampropoulos, Nikos Mamoulis and Manolis Terrovitis, "Two-layer Space-oriented Partitioning for Non-point Data", IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), Vol 36, No 3, March 2024.
-Dimitrios Tsitsigkos, Konstantinos Lampropoulos, Panagiotis Bouros, Nikos Mamoulis and Manolis Terrovitis, "A Two-layer Partitioning for Non-point Spatial Data", Proceedings of the 37th IEEE International Conference on Data Engineering (IEEE ICDE'21), Chania, Greece, April 19-22, 2021.
+@article{DBLP:journals/tkde/TsitsigkosBLMT24,
+  author       = {Dimitrios Tsitsigkos and
+                  Panagiotis Bouros and
+                  Konstantinos Lampropoulos and
+                  Nikos Mamoulis and
+                  Manolis Terrovitis},
+  title        = {Two-Layer Space-Oriented Partitioning for Non-Point Data},
+  journal      = {{IEEE} Trans. Knowl. Data Eng.},
+  volume       = {36},
+  number       = {3},
+  pages        = {1341--1355},
+  year         = {2024},
+  url          = {https://doi.org/10.1109/TKDE.2023.3297975},
+  doi          = {10.1109/TKDE.2023.3297975}
+}
+
+@inproceedings{DBLP:conf/icde/TsitsigkosLBMT21,
+  author       = {Dimitrios Tsitsigkos and
+                  Konstantinos Lampropoulos and
+                  Panagiotis Bouros and
+                  Nikos Mamoulis and
+                  Manolis Terrovitis},
+  title        = {A Two-layer Partitioning for Non-point Spatial Data},
+  booktitle    = {37th {IEEE} International Conference on Data Engineering, {ICDE} 2021,
+                  Chania, Greece, April 19-22, 2021},
+  pages        = {1787--1798},
+  publisher    = {{IEEE}},
+  year         = {2021},
+  url          = {https://doi.org/10.1109/ICDE51399.2021.00157},
+  doi          = {10.1109/ICDE51399.2021.00157}
+}
 ```
 
 # Acknowledgments
