@@ -10,8 +10,9 @@ alternative duplicate elimination techniques and data-oriented state-of-the-art 
 technique, paired with optimized partition-to-partition join algorithms, typically reduces the cost of spatial joins by around 50%.
 
 Source code from the following publications:
-    -  <p align="justify"> Dimitrios Tsitsigkos, Panagiotis Bouros, Konstantinos Lampropoulos, Nikos Mamoulis and Manolis Terrovitis, <i>Two-layer Space-oriented Partitioning for Non-point Data</i>, https://doi.org/10.1109/TKDE.2023.3297975, IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), Vol 36, No 3, March 2024 </p>
-    -  <p align="justify"> Dimitrios Tsitsigkos, Konstantinos Lampropoulos, Panagiotis Bouros, Nikos Mamoulis and Manolis Terrovitis, <i>A Two-layer Partitioning for Non-point Spatial Data</i>, https://doi.org/10.1109/ICDE51399.2021.00157, Proceedings of the 37th IEEE International Conference on Data Engineering (IEEE ICDE'21), Chania, Greece, April 19-22, 2021</p>
+
+    - <p align="justify"> Dimitrios Tsitsigkos, Panagiotis Bouros, Konstantinos Lampropoulos, Nikos Mamoulis and Manolis Terrovitis, <i>Two-layer Space-oriented Partitioning for Non-point Data</i>, https://doi.org/10.1109/TKDE.2023.3297975, IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), Vol 36, No 3, March 2024 </p>
+    - <p align="justify"> Dimitrios Tsitsigkos, Konstantinos Lampropoulos, Panagiotis Bouros, Nikos Mamoulis and Manolis Terrovitis, <i>A Two-layer Partitioning for Non-point Spatial Data</i>, https://doi.org/10.1109/ICDE51399.2021.00157, Proceedings of the 37th IEEE International Conference on Data Engineering (IEEE ICDE'21), Chania, Greece, April 19-22, 2021</p>
 
 ### Dependencies
 - g++/gcc 
